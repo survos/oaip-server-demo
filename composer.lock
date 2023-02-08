@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7f1c7f9d360f87d800f5bff5d59f2412",
+    "content-hash": "d86716d84910a8d56278ff5fa3550efe",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1538,6 +1538,41 @@
                 }
             ],
             "time": "2023-01-30T10:40:19+00:00"
+        },
+        {
+            "name": "hab/oai-repository",
+            "version": "dev-tac",
+            "dist": {
+                "type": "path",
+                "url": "/home/tac/ca/oai-repository",
+                "reference": "cba953b99d38fc0ed50bfe7e16a7bbc40d57d421"
+            },
+            "require": {
+                "ext-xmlwriter": "*",
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "phan/phan": "^3.2",
+                "phpstan/phpstan": "^1.8",
+                "phpunit/phpunit": "^8.3",
+                "psr/container": "^1.0.0"
+            },
+            "suggest": {
+                "psr/container-implementation": "Needed to use the repository default implementation"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "HAB": "src/"
+                }
+            },
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "description": "An OAI-PMH repository implementation",
+            "transport-options": {
+                "relative": false
+            }
         },
         {
             "name": "laminas/laminas-code",
@@ -9692,7 +9727,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "hab/oai-repository": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
